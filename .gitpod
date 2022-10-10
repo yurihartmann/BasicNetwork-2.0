@@ -1,0 +1,9 @@
+tasks:
+  - name: Configure enviroment
+    init: |
+      ./install-fabric.sh 
+      mv $(pwd)/fabric-samples $(pwd)/hyperledger_fabric
+      export PATH=$PATH:$(pwd)/hyperledger_fabric/bin
+      echo "export PATH=$PATH:$(pwd)/hyperledger_fabric/bin" >> ~/.bashrc
+    command: |
+      echo "=============== Pronto ==============="
